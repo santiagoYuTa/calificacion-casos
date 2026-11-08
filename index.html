@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Promedio con switch</title>
+</head>
+<body>
+  <script>
+    let cal1 = Number(prompt("Ingresa la primera calificación:"));
+    let cal2 = Number(prompt("Ingresa la segunda calificación:"));
+    let cal3 = Number(prompt("Ingresa la tercera calificación:"));
+
+    let promedio = (cal1 + cal2 + cal3) / 3;
+
+    switch (true) {
+      case (promedio < 6):
+        alert("Tu promedio es " + promedio.toFixed(1) + ". Estás reprobado. ¡Tienes que estudiar más!");
+        break;
+      case (promedio >= 6 && promedio <= 8):
+        alert("Tu promedio es " + promedio.toFixed(1) + ". Aprobado de panzazo o regular. Échale más ganas.");
+        break;
+      case (promedio > 8 && promedio <= 10):
+        alert("Tu promedio es " + promedio.toFixed(1) + ". ¡Excelente promedio! Sigue así.");
+        break;
+      default:
+        alert("Calificaciones no válidas");
+    }
+  </script>
+</body>
+</html>
